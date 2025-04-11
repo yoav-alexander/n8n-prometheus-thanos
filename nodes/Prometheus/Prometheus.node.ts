@@ -66,12 +66,11 @@ export class Prometheus implements INodeType {
 				},
 			},
 
-			// Operations will go here (required fields)
 			{
 				displayName: 'Query',
 				description: 'PromQL query',
 				required: true,
-				name: 'promqLquery',
+				name: 'promQLquery',
 				type: 'string',
 				default:'',
 				displayOptions: {
@@ -84,14 +83,12 @@ export class Prometheus implements INodeType {
 				},
 				routing: {
 					request: {
-						// You've already set up the URL. qs appends the value of the field as a query string
 						qs: {
 							query: '={{ $value }}',
 						},
 					},
 				},
 			},
-			// Optional/additional fields will go here
 		]
 
 	};
